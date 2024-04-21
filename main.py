@@ -25,7 +25,7 @@ async def _(m: Message):
     else:
         db.insert({'user_id': m.from_user.id, 'text': (text := secrets.token_hex(3))})
     link = f'https://t.me/{settings.TARGET_USERNAME}?text=@{settings.BOT_USERNAME}%20{text}'
-    await m.answer(f'Your link is:\n<a href="{link}">{link}</a>')
+    await m.answer(f'Your link is:\n<a href="{link}">{link}</a>', disable_web_page_preview=True)
     
 @dp.inline_query()
 async def _(q: InlineQuery):

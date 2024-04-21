@@ -49,7 +49,7 @@ async def _(q: InlineQuery):
             title=f'Your ID: {q.from_user.id}',
             input_message_content=InputTextMessageContent(message_text=f'Your ID: {q.from_user.id}')
         )
-    await q.answer(article)
+    await q.answer([article])
     
 
 

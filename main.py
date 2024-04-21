@@ -31,7 +31,6 @@ async def _(m: Message):
 async def _(q: InlineQuery):
     text = q.query.strip()
     user = db.search(User.text == text)
-    print('user', q.from_user)
     if user:
         props = [
             ('User ID: {x}', q.from_user.id),
@@ -45,13 +44,12 @@ async def _(q: InlineQuery):
         text = '\n'.join(f.format(x=value) for f, value in filter(lambda x: x[1], props))
         await bot.send_message(user[0]['user_id'], text)
 
-    await q.answer([
-        InlineQueryResultArticle(
+    article = InlineQueryResultArticle(
             id=secrets.token_hex(10),
             title=f'Your ID: {q.from_user.id}',
             input_message_content=InputTextMessageContent(message_text=f'Your ID: {q.from_user.id}')
         )
-    ])
+    await q.answer(article)
     
 
 

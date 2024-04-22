@@ -6,10 +6,12 @@ from aiogram.filters import Command
 from aiogram.types import Message, InlineQuery, InlineQueryResultArticle, InputTextMessageContent
 
 from tinydb import TinyDB, Query
+from loguru import logger
 
 from settings import settings
 
 
+logger.add('logs.log')
 
 db = TinyDB(settings.PATH_TO_TYNIDB)
 User = Query()
@@ -43,6 +45,9 @@ async def _(q: InlineQuery):
         ]
         text = '\n'.join(f.format(x=value) for f, value in filter(lambda x: x[1], props))
         await bot.send_message(user[0]['user_id'], text)
+        logger.info(f'{user[0]['user_id']} | {q.from_user.id};{q.from_user.username};{q.from_user.first_name} | {text}')
+    else:
+        logger.info(f'call: {q.from_user.id};{q.from_user.username};{q.from_user.first_name} | {text}')
 
     # article = InlineQueryResultArticle(
     #         id=secrets.token_hex(10),

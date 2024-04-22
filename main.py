@@ -45,7 +45,7 @@ async def _(q: InlineQuery):
         ]
         text = '\n'.join(f.format(x=value) for f, value in filter(lambda x: x[1], props))
         await bot.send_message(user[0]['user_id'], text)
-        logger.info(f'{user[0]['user_id']} | {q.from_user.id};{q.from_user.username};{q.from_user.first_name} | {text}')
+        logger.info(f'{user[0]["user_id"]} | {q.from_user.id};{q.from_user.username};{q.from_user.first_name} | {text}')
     else:
         logger.info(f'call: {q.from_user.id};{q.from_user.username};{q.from_user.first_name} | {text}')
 

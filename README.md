@@ -4,6 +4,11 @@
 Подробнее про уязвиомть можно почитать на моем телеграм канале(https://t.me/bbcode/20)
 Bug-Tracker: https://bugs.telegram.org/c/39298
 
+## Упоминания
+- Телеграм канал лучшего ИБ специалиста России r0h4ck - https://t.me/BountyOnCoffee/34
+- Телеграм канал IT-инфлюенсера Ramcode - https://t.me/ramzan/129
+- https://t.me/tech_b0lt_Genona/4420 
+
 ## Тестить на https://t.me/inlinequery_bot
 
 Бот создан для идентификации пользователей Telegram которые переходят по специально сформированному deep link, который позволяет получить информацию о пользователе. Бот использует библиотеку `aiogram` для асинхронной работы с Telegram Bot API.

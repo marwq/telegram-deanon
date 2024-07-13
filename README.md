@@ -7,6 +7,7 @@ Bug-Tracker: https://bugs.telegram.org/c/39298
 ## Упоминания
 - Телеграм канал лучшего ИБ специалиста России r0h4ck - https://t.me/BountyOnCoffee/344
 - Телеграм канал IT-инфлюенсера Ramcode - https://t.me/ramzan/129
+- SecuriXy[.]kz - https://t.me/securixy_kz/878
 - https://t.me/tech_b0lt_Genona/4420 
 
 ## Тестить на https://t.me/inlinequery_bot
